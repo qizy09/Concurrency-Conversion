@@ -24,7 +24,7 @@ This is a backup repository for a previous IOS homework project of the [course](
     app converting to all three untis. Then stop the recording. Save the file to your local computer, then 
     upload to Coursera for Peer Review.
 ```
- You can find a demo video [here](https://www.youtube.com/watch?v=Wb_Az4IoPmg&feature=youtu.be).
+ You can find a demo video [here](https://www.youtube.com/watch?v=19s_l3wuSx8&feature=youtu.be).
  
 # Descriptions
 1. Except for when button is clicked, when the input value is changed in the text filed, my app is gonna update the results automatically
