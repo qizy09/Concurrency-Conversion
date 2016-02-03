@@ -1,25 +1,145 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwF-E8-x9h">
+                                <rect key="frame" x="104" y="267" width="113" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ag8-3l-Juc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an amount in US dollars" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VN8-Z7-J6y">
+                                <rect key="frame" x="20" y="237" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="e57-81-gRw"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CNY" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Siu-8c-XVx">
+                                <rect key="frame" x="20" y="319" width="165" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="EUR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al7-Cb-lsN">
+                                <rect key="frame" x="20" y="380" width="165" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="JPY" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ej-Hg-bRF">
+                                <rect key="frame" x="19" y="444" width="166" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRV-yq-l3e">
+                                <rect key="frame" x="218" y="319" width="94" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54j-vp-dhn">
+                                <rect key="frame" x="218" y="380" width="94" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccZ-oS-U1Q">
+                                <rect key="frame" x="218" y="444" width="94" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z48-AL-mhp">
+                                <rect key="frame" x="20" y="115" width="280" height="29"/>
+                                <segments>
+                                    <segment title="GBP"/>
+                                    <segment title="CZK"/>
+                                    <segment title="DKK"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectorChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GCn-xF-EYr"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Currency Conversion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V90-AS-00R">
+                                <rect key="frame" x="25" y="44" width="270" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.93674568965517246" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="GBP" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUw-LN-V6z">
+                                <rect key="frame" x="20" y="172" width="165" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxC-Ge-EOD">
+                                <rect key="frame" x="218" y="172" width="94" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LwF-E8-x9h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Rs-VI-6Ty"/>
+                            <constraint firstItem="Siu-8c-XVx" firstAttribute="top" secondItem="LwF-E8-x9h" secondAttribute="bottom" constant="18" id="BNs-KR-Dmz"/>
+                            <constraint firstItem="VN8-Z7-J6y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E2R-sm-D7d"/>
+                            <constraint firstItem="Z48-AL-mhp" firstAttribute="centerX" secondItem="LwF-E8-x9h" secondAttribute="centerX" id="FXh-lG-bMp"/>
+                            <constraint firstItem="LwF-E8-x9h" firstAttribute="top" secondItem="V90-AS-00R" secondAttribute="bottom" constant="188" id="KEH-gt-g5S"/>
+                            <constraint firstItem="Siu-8c-XVx" firstAttribute="centerY" secondItem="IRV-yq-l3e" secondAttribute="centerY" id="Ktt-Ua-66x"/>
+                            <constraint firstItem="ccZ-oS-U1Q" firstAttribute="leading" secondItem="0ej-Hg-bRF" secondAttribute="trailing" constant="8" id="Mam-ZR-SoL"/>
+                            <constraint firstItem="LwF-E8-x9h" firstAttribute="top" secondItem="GUw-LN-V6z" secondAttribute="bottom" constant="52" id="OIn-WY-dBx"/>
+                            <constraint firstItem="LwF-E8-x9h" firstAttribute="top" secondItem="VN8-Z7-J6y" secondAttribute="bottom" id="YeR-d8-cKY"/>
+                            <constraint firstItem="al7-Cb-lsN" firstAttribute="top" secondItem="LwF-E8-x9h" secondAttribute="bottom" constant="79" id="Yep-EG-WiD"/>
+                            <constraint firstItem="LwF-E8-x9h" firstAttribute="top" secondItem="RxC-Ge-EOD" secondAttribute="bottom" constant="52" id="Ygj-bW-WAK"/>
+                            <constraint firstItem="IRV-yq-l3e" firstAttribute="leading" secondItem="Siu-8c-XVx" secondAttribute="trailing" constant="8" id="bEV-GX-8qJ"/>
+                            <constraint firstItem="V90-AS-00R" firstAttribute="centerX" secondItem="LwF-E8-x9h" secondAttribute="centerX" id="efr-g2-hdg"/>
+                            <constraint firstItem="LwF-E8-x9h" firstAttribute="top" secondItem="Z48-AL-mhp" secondAttribute="bottom" constant="124" id="ogj-Oy-oNH"/>
+                            <constraint firstItem="0ej-Hg-bRF" firstAttribute="top" secondItem="LwF-E8-x9h" secondAttribute="bottom" constant="143" id="sw8-9f-9VE"/>
+                            <constraint firstItem="RxC-Ge-EOD" firstAttribute="leading" secondItem="GUw-LN-V6z" secondAttribute="trailing" constant="33" id="tkA-QD-IY5"/>
+                            <constraint firstItem="0ej-Hg-bRF" firstAttribute="centerY" secondItem="ccZ-oS-U1Q" secondAttribute="centerY" id="vB0-DO-zVn"/>
+                            <constraint firstItem="54j-vp-dhn" firstAttribute="leading" secondItem="al7-Cb-lsN" secondAttribute="trailing" constant="8" id="xgy-PG-rPq"/>
+                            <constraint firstItem="al7-Cb-lsN" firstAttribute="centerY" secondItem="54j-vp-dhn" secondAttribute="centerY" id="zoL-82-duz"/>
+                            <constraint firstItem="LwF-E8-x9h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zqw-Bc-IhJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="convertButton" destination="LwF-E8-x9h" id="Yfe-Vp-Thf"/>
+                        <outlet property="currencyLabel0" destination="GUw-LN-V6z" id="Bib-t4-gQG"/>
+                        <outlet property="currencyLabel1" destination="Siu-8c-XVx" id="2Hj-ue-zeA"/>
+                        <outlet property="currencyLabel2" destination="al7-Cb-lsN" id="DyB-BV-mH0"/>
+                        <outlet property="currencyLabel3" destination="0ej-Hg-bRF" id="Wbc-wk-4bn"/>
+                        <outlet property="currencyOutput0" destination="RxC-Ge-EOD" id="5JH-x3-zf2"/>
+                        <outlet property="currencyOutput1" destination="IRV-yq-l3e" id="wNq-xU-daB"/>
+                        <outlet property="currencyOutput2" destination="54j-vp-dhn" id="emm-57-qr6"/>
+                        <outlet property="currencyOutput3" destination="ccZ-oS-U1Q" id="7dX-fd-70i"/>
+                        <outlet property="currencySelector" destination="Z48-AL-mhp" id="S4c-ub-tv3"/>
+                        <outlet property="inputField" destination="VN8-Z7-J6y" id="HIb-LJ-MG4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="162" y="377"/>
         </scene>
     </scenes>
 </document>

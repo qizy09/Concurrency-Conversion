@@ -13,6 +13,7 @@
 		11AB331B1C1C12E9009FC03C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AB33191C1C12E9009FC03C /* Main.storyboard */; };
 		11AB331D1C1C12E9009FC03C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AB331C1C1C12E9009FC03C /* Assets.xcassets */; };
 		11AB33201C1C12E9009FC03C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AB331E1C1C12E9009FC03C /* LaunchScreen.storyboard */; };
+		5656C3E80DC71B212672DED4 /* libPods-Concurrency Conversion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83356458C09B87C54DD90F1C /* libPods-Concurrency Conversion.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		11AB331C1C1C12E9009FC03C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11AB331F1C1C12E9009FC03C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11AB33211C1C12E9009FC03C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83356458C09B87C54DD90F1C /* libPods-Concurrency Conversion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Concurrency Conversion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF937A19EDBFD576234B9714 /* Pods-Concurrency Conversion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Concurrency Conversion.release.xcconfig"; path = "Pods/Target Support Files/Pods-Concurrency Conversion/Pods-Concurrency Conversion.release.xcconfig"; sourceTree = "<group>"; };
+		E1B35486813CA889CB1063C5 /* Pods-Concurrency Conversion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Concurrency Conversion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Concurrency Conversion/Pods-Concurrency Conversion.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5656C3E80DC71B212672DED4 /* libPods-Concurrency Conversion.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053C7E665E44427BB3D0DED2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83356458C09B87C54DD90F1C /* libPods-Concurrency Conversion.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		11AB33041C1C12E9009FC03C = {
 			isa = PBXGroup;
 			children = (
 				11AB330F1C1C12E9009FC03C /* Concurrency Conversion */,
 				11AB330E1C1C12E9009FC03C /* Products */,
+				3DE427215580958F5B5D0545 /* Pods */,
+				053C7E665E44427BB3D0DED2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3DE427215580958F5B5D0545 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1B35486813CA889CB1063C5 /* Pods-Concurrency Conversion.debug.xcconfig */,
+				BF937A19EDBFD576234B9714 /* Pods-Concurrency Conversion.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11AB33241C1C12E9009FC03C /* Build configuration list for PBXNativeTarget "Concurrency Conversion" */;
 			buildPhases = (
+				F3F9268C7D28FDA79A6D3D80 /* Check Pods Manifest.lock */,
 				11AB33091C1C12E9009FC03C /* Sources */,
 				11AB330A1C1C12E9009FC03C /* Frameworks */,
 				11AB330B1C1C12E9009FC03C /* Resources */,
+				012E2B19016CDC0E2602BDAE /* Embed Pods Frameworks */,
+				BEF83354EC84179DE58474FC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		012E2B19016CDC0E2602BDAE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Concurrency Conversion/Pods-Concurrency Conversion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEF83354EC84179DE58474FC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Concurrency Conversion/Pods-Concurrency Conversion-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3F9268C7D28FDA79A6D3D80 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11AB33091C1C12E9009FC03C /* Sources */ = {
@@ -262,22 +337,24 @@
 		};
 		11AB33251C1C12E9009FC03C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1B35486813CA889CB1063C5 /* Pods-Concurrency Conversion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Concurrency Conversion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Handsome-Individuals.Concurrency-Conversion";
+				PRODUCT_BUNDLE_IDENTIFIER = "Handsome-Individuals.Currency-Conversion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		11AB33261C1C12E9009FC03C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF937A19EDBFD576234B9714 /* Pods-Concurrency Conversion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Concurrency Conversion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Handsome-Individuals.Concurrency-Conversion";
+				PRODUCT_BUNDLE_IDENTIFIER = "Handsome-Individuals.Currency-Conversion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -301,6 +378,7 @@
 				11AB33261C1C12E9009FC03C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
